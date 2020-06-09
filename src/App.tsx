@@ -1,23 +1,17 @@
 import React from 'react';
-
+import Button, { ButtonSize, ButtonType} from './components/Button/button';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Button disabled>点击</Button>
+      <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
+        Danger
+      </Button>
+      <Button href="222" btnType={ButtonType.Link} size={ButtonSize.Large}>
+        点击
+      </Button>
     </div>
-  );
+  )
 }
 
 export default App;
