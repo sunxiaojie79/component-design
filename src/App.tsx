@@ -7,7 +7,19 @@ function App() {
       <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
         Danger
       </Button>
-      <Button href="222" btnType={ButtonType.Link} size={ButtonSize.Large}>
+      <Button
+        disabled
+        href='222'
+        btnType={ButtonType.Link}
+        size={ButtonSize.Large}
+      >
+        点击
+      </Button>
+      <Button
+        href='222'
+        btnType={ButtonType.Link}
+        size={ButtonSize.Large}
+      >
         点击
       </Button>
     </div>
