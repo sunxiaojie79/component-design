@@ -4,14 +4,16 @@ function App() {
   return (
     <div className='App'>
       <Button disabled>点击</Button>
-      <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
+      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
         Danger
+      </Button>
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+        Primary
       </Button>
       <Button
         disabled
         href='222'
         btnType={ButtonType.Link}
-        size={ButtonSize.Large}
       >
         点击
       </Button>
