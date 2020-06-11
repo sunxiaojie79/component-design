@@ -3,11 +3,11 @@ import Button, { ButtonSize, ButtonType} from './components/Button/button';
 function App() {
   return (
     <div className='App'>
-      <Button disabled>点击</Button>
-      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+      <Button disabled >点击</Button>
+      <Button onClick={() => alert(666)} btnType={ButtonType.Danger} size={ButtonSize.Small}>
         Danger
       </Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+      <Button className="custom" btnType={ButtonType.Primary} size={ButtonSize.Large}>
         Primary
       </Button>
       <Button
@@ -19,6 +19,7 @@ function App() {
       </Button>
       <Button
         href='222'
+        target='_blank'
         btnType={ButtonType.Link}
         size={ButtonSize.Large}
       >
