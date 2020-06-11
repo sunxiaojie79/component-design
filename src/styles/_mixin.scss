@@ -26,4 +26,10 @@
     background: $hover-background;
     border-color: $hover-border;
   }
+  &:disabled,
+  &.disabled {
+    color: $color;
+    background: $background;
+    border-color: $border;
+  }
 }
