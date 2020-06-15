@@ -12,7 +12,7 @@ const testProps: ButtonProps = {
 }
 const disabledProps: ButtonProps = {
   disabled: true,
-  onClick: jest.fn()
+  onClick: jest.fn(),
 }
 describe('test Button component', () => { 
   it('should render the correct default button', () => { 
