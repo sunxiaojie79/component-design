@@ -21,7 +21,7 @@ const Menu: React.FC<MenuProps> = (props) => {
   const { className, mode, style, children, defaultIndex, onSelect } = props
   const [currentActive, setActive] = useState(defaultIndex)
   const classes = classNames('viking-menu', className, {
-    'menu-vertival': mode === 'vertical'
+    'menu-vertical': mode === 'vertical',
   })
   const handleClick = (index: number) => { 
     setActive(index)
