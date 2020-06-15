@@ -5,29 +5,29 @@ import MenuItem from './components/Menu/menuItem';
 function App() {
   return (
     <div className='App'>
-      <Menu defaultIndex={0}>
-        <MenuItem>
+      <Menu defaultIndex={0} onSelect={(index) => alert(index)}>
+        <MenuItem index={0} disabled>
           cool link
         </MenuItem>
-        <MenuItem>
-          cool link1
-        </MenuItem>
-        <MenuItem>
-          cool link2
-        </MenuItem>
+        <MenuItem index={1}>cool link1</MenuItem>
+        <MenuItem index={2}>cool link2</MenuItem>
       </Menu>
-      <Button disabled >点击</Button>
-      <Button onClick={() => alert(666)} btnType={ButtonType.Danger} size={ButtonSize.Small}>
+      <Button disabled>点击</Button>
+      <Button
+        onClick={() => alert(666)}
+        btnType={ButtonType.Danger}
+        size={ButtonSize.Small}
+      >
         Danger
       </Button>
-      <Button className="custom" btnType={ButtonType.Primary} size={ButtonSize.Large}>
+      <Button
+        className='custom'
+        btnType={ButtonType.Primary}
+        size={ButtonSize.Large}
+      >
         Primary
       </Button>
-      <Button
-        disabled
-        href='222'
-        btnType={ButtonType.Link}
-      >
+      <Button disabled href='222' btnType={ButtonType.Link}>
         点击
       </Button>
       <Button
