@@ -6,11 +6,11 @@ function App() {
   return (
     <div className='App'>
       <Menu defaultIndex={0} onSelect={(index) => alert(index)} mode={'vertical'}>
-        <MenuItem index={0} disabled>
+        <MenuItem disabled>
           cool link
         </MenuItem>
-        <MenuItem index={1}>cool link1</MenuItem>
-        <MenuItem index={2}>cool link2</MenuItem>
+        <MenuItem >cool link1</MenuItem>
+        <MenuItem >cool link2</MenuItem>
       </Menu>
       <Button disabled>点击</Button>
       <Button
