@@ -2,15 +2,23 @@ import React from 'react';
 import Button, { ButtonSize, ButtonType } from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SubMenu from './components/Menu/subMenu';
 function App() {
   return (
     <div className='App'>
-      <Menu defaultIndex={0} onSelect={(index) => alert(index)} mode={'vertical'}>
-        <MenuItem disabled>
-          cool link
-        </MenuItem>
-        <MenuItem >cool link1</MenuItem>
-        <MenuItem >cool link2</MenuItem>
+      <Menu
+        defaultIndex={0}
+        onSelect={(index) => alert(index)}
+        mode={'vertical'}
+      >
+        <MenuItem>cool link</MenuItem>
+        <MenuItem disabled>cool link1</MenuItem>
+        <SubMenu title='SubMenu'>
+          <MenuItem>sub 1</MenuItem>
+          <MenuItem>sub 2</MenuItem>
+        </SubMenu>
+
+        <MenuItem>cool link2</MenuItem>
       </Menu>
       <Button disabled>点击</Button>
       <Button
