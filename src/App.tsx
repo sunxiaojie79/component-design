@@ -10,6 +10,7 @@ function App() {
         defaultIndex={'0'}
         onSelect={(index) => alert(index)}
         mode={'vertical'}
+        defaultOpenSubMenus={['2']}
       >
         <MenuItem>cool link</MenuItem>
         <MenuItem disabled>cool link1</MenuItem>
