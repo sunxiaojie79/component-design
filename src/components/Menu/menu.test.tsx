@@ -7,6 +7,7 @@ import {
 } from '@testing-library/react'
 import Menu, { MenuProps } from './menu';
 import MenuItem from './menuItem';
+import SubMenu from './subMenu'
 
 const testProps: MenuProps = {
   defaultIndex: '0',
@@ -16,7 +17,8 @@ const testProps: MenuProps = {
 
 const testVerProps: MenuProps = {
   defaultIndex: '0',
-  mode: 'vertical'
+  mode: 'vertical',
+  defaultOpenSubMenus: ['4'],
 }
 const generateMenu = (props: MenuProps) => {
   return (
@@ -26,6 +28,11 @@ const generateMenu = (props: MenuProps) => {
         disabled
       </MenuItem>
       <MenuItem index={'2'}>xyz</MenuItem>
+      <SubMenu title="dropdown">
+        <MenuItem>
+          drop1
+        </MenuItem>
+      </SubMenu>
     </Menu>
   )
 }
@@ -43,7 +50,7 @@ describe('test Menu and MenuItem component in default(horizontal) mode', () => {
   it('should render correct Menu and MenuItem based on default props', () => { 
     expect(menuElement).toBeInTheDocument()
     expect(menuElement).toHaveClass('viking-menu test')
-    expect(menuElement.querySelectorAll('li').length).toEqual(3)
+    expect(menuElement.querySelectorAll(':scope > li').length).toEqual(4)
     expect(activeElement).toHaveClass('menu-item is-active')
     expect(disabledElement).toHaveClass('menu-item is-disabled')
   })
